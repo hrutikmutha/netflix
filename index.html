@@ -1,31 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>
-        netflix
-    </title>
+    <meta charset="UTF-8">
+    <title>Netflix Clone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #141414;
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            color: #b4f809;
+            margin-bottom: 30px;
+        }
+
+        h3.section-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+        }
+
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .movie-card {
+            background-color: #1f1f1f;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .movie-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+        }
+
+        .movie-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .movie-card .content {
+            padding: 15px;
+        }
+
+        .movie-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .movie-card a {
+            color: #5d09e5;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .movie-card a:hover {
+            color: #ffffff;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .movie-card img {
+                height: 200px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>welcome to netflix</h1>
-    <h3>movies</h3>
-    <ol>
-        <li>
-            <div>
-                <img src="./images/3 idoits.jpeg">
-                <h3> 3 Idiots</h3>
+
+    <h1>Welcome to Netflix</h1>
+    <h3 class="section-title">Movies</h3>
+    <div class="movie-grid">
+        <!-- Movie 1 -->
+        <div class="movie-card">
+            <img src="./images/3 idoits.jpeg" alt="3 Idiots Poster">
+            <div class="content">
+                <h3>3 Idiots</h3>
+                <a href="https://youtu.be/KK_0AqEPjyY?si=EQlRxYubfW4ExjSL" target="_blank">Click here to watch</a>
             </div>
-        </li>
-        <li>
-            <div>
-                <img src="./images/dragon.jpeg">
-                <h3> dragon</h3>
+        </div>
+
+        <!-- Movie 2 -->
+        <div class="movie-card">
+            <img src="./images/dragon.jpeg" alt="Dragon Movie Poster">
+            <div class="content">
+                <h3>Dragon</h3>                
+                <a href="https://youtu.be/fjQrNsBwfIk?si=N_I0K2qQ_uyO7tPc" target="_blank">Click here to watch</a>
             </div>
-        </li>
-        <li>
-            <div>
-                <img src="./images/saiyara.jpeg">
-                <h3> saiyara</h3>
+        </div>
+
+        <!-- Movie 3 -->
+        <div class="movie-card">
+            <img src="./images/saiyara.jpeg" alt="Saiyara Movie Poster">
+            <div class="content">
+                <h3>Saiyara</h3>                
+                <a href="https://youtu.be/AitZ6EAEeUs?si=h_deFsPs5Xrif8dk" target="_blank">Click here to watch</a>
             </div>
-        </li>
-    </ol>
+        </div>
+    </div>
+
 </body>
-
-
+</html>
